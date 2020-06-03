@@ -79,15 +79,94 @@ function generateTeam() {
           generateEngineer();
           break;
         case "No that's ok team has been assembled":
-          createTeam();
+          makeTeam();
           break;
       }
     });
 }
 
+function generateEngineer() {
+  inquirer
+    .prompt([
+      {
+        name: "name",
+        type: "input",
+        message: "What is the name of your Engineer?",
+      },
+      {
+        name: "id",
+        type: "input",
+        message: "What is the ID number for your Engineer?",
+      },
+      {
+        name: "email",
+        type: "input",
+        message: "What is the email for your Engineer?",
+      },
+      {
+        name: "github",
+        type: "input",
+        message: "What is the GitHub username of your Engineer?",
+      },
+    ])
+    .then(function (result) {
+      const freshEngineer = new Engineer(
+        result.name,
+        result.id,
+        result.email,
+        result.github
+      );
+      workMates.push(freshEngineer);
+      generateTeam();
+    });
+}
+
+function generateIntern() {
+    inquirer
+      .prompt([
+        {
+          name: "name",
+          type: "input",
+          message: "What is the name of your Intern?",
+        },
+        {
+          name: "id",
+          type: "input",
+          message: "What is the ID number for your Intern?",
+        },
+        {
+          name: "email",
+          type: "input",
+          message: "What is the email for your Intern?",
+        },
+        {
+          name: "school",
+          type: "input",
+          message: "What school is your Intern from?",
+        },
+      ])
+      .then(function (result) {
+        const freshIntern = new Intern(
+          result.name,
+          result.id,
+          result.email,
+          result.github
+        );
+        workMates.push(freshIntern);
+        generateTeam();
+      });
+  }
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+
+function makeTeam() {
+    fs.writeFileSync(outputPath, render(workMates), "utf8");
+}
+
+
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
