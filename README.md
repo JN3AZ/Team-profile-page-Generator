@@ -37,3 +37,9 @@ After conducting many tests by way of npm run test I was able to target bugs and
 
 ## Screenshots of Demo
 
+<img src="Develop/images/Team-pageDemo3.PNG" width="800">
+
+<img src="Develop/images/Team-pageDemo4.PNG" width="800">
+
+<img src="Develop/images/Team-pageDemo6PNG.PNG" width="800">
+
