@@ -60,9 +60,8 @@ function generateTeam() {
         message: "Shall we add a workmate?",
         choices: [
           "Sure, add a Manager",
-          "Sure, add an Intern",
           "Sure, add an Engineer",
-          "Sure, add a Manager",
+          "Sure, add an Intern",
           "No that's ok team has been assembled",
         ],
       },
@@ -150,7 +149,7 @@ function generateIntern() {
           result.name,
           result.id,
           result.email,
-          result.github
+          result.school
         );
         workMates.push(freshIntern);
         generateTeam();
