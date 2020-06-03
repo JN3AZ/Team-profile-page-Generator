@@ -16,7 +16,7 @@ You will build a software engineering team generator command line application. T
 *License
 *Contributing
 *Tests
-*Screenshots of Demo
+*Screenshots & Gif of Demo
 
 ##  Installation
 
@@ -35,7 +35,9 @@ James Nowak
 
 After conducting many tests by way of npm run test I was able to target bugs and fix them eventually successfully passing all test files.
 
-## Screenshots of Demo
+## Screenshots & Gif of Demo
+
+<img src="Develop/images/appjs-Team-profile-page-Generato.gif" width="800">
 
 <img src="Develop/images/Team-pageDemo3.PNG" width="800">
 
